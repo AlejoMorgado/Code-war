@@ -1,17 +1,23 @@
+
 function explode(x) {
-  let score = 0;
-  let result = [];
-  if (typeof x[0] !== "number" && typeof x[1] !== "number") {
-    return "Void!";
-  } else if (typeof x[0] !== "number" && typeof x[1] === "number") {
-    score = x[1];
-  } else if (typeof x[0] === "number" && typeof x[1] !== "number") {
-    score = x[0];
-  } else {
-    score = x[0] + x[1];
+  let score;
+  let newArray = [];
+  switch (true) {
+    case (typeof x[0] === "number" && typeof x[1] === "number"):
+      score = x[0] + x[1];
+      break;
+    case (typeof x[0] === "number"):
+      score = x[0];
+      break;
+    case (typeof x[1] === "number"):
+      score = x[1];
+      break;
+    default:
+      return "Void"
   }
-  for (let i = 0; i < score; i++) {
-    result.push(x);
+  for (let index = 0; index < score; index++) {
+    newArray.push(x);
   }
-  return result;
+  return newArray;
 }
+console.log(explode([3, 3]));

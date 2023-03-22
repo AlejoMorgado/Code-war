@@ -1,13 +1,15 @@
 function longestConsec(strarr, k) {
-  if (strarr.length == 0 || k > strarr.length || k <= 0) {
+  let largestStrings = "";
+  if (strarr.length === 0 || k > strarr.length || k < 0) {
     return "";
-  }
-  let longest = "";
-  for (let i = 0; i < strarr.length; i++) {
-    let currentStr = strarr.slice(i, i + k).join("");
-    if (currentStr.length > longest.length) {
-      longest = currentStr;
+  } else {
+    for (let index = 0; index < strarr.length; index++) {
+      let concatStrings = strarr.slice(index, index+k).join("");
+      if (concatStrings.length > largestStrings.length) {
+        largestStrings = concatStrings;
+      }
     }
+    return largestStrings;
   }
-  return longest;
 }
+console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2));  
