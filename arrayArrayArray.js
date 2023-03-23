@@ -13,7 +13,7 @@ function explode(x) {
       score = x[1];
       break;
     default:
-      return "Void"
+      return "Void !"
   }
   for (let index = 0; index < score; index++) {
     newArray.push(x);

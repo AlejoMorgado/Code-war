@@ -3,7 +3,7 @@ function longestConsec(strarr, k) {
   if (strarr.length === 0 || k > strarr.length || k < 0) {
     return "";
   } else {
-    for (let index = 0; index < strarr.length; index++) {
+    for (let index = 0; index <= strarr.length; index++) {
       let concatStrings = strarr.slice(index, index+k).join("");
       if (concatStrings.length > largestStrings.length) {
         largestStrings = concatStrings;
@@ -12,4 +12,4 @@ function longestConsec(strarr, k) {
     return largestStrings;
   }
 }
-console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2));  
+console.log(longestConsec(["zone", "abigail", "theta", "form", "libehibyelol", "zas", "theta", "abigail"], 4));  
