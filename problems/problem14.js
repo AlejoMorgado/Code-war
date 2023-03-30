@@ -12,6 +12,8 @@ function removeSmallest(arr) {
       minIndex = i;
     }
   }
+
+  
   const result = [];
   for (let i = 0; i < arr.length; i++) {
     if (i !== minIndex) {

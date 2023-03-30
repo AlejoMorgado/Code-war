@@ -8,3 +8,5 @@ function sumOfCubes(nums) {
   return totalSum
 }
 console.log(sumOfCubes([1, 5, 9]));
+
+
