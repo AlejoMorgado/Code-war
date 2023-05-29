@@ -100,7 +100,7 @@ const createBill = (userName, productName, productQuant) => {
   const totalPrice = productQuant * product.newPrice
 
   return {
-    userName: `${customer.name} ${customer.surname}`,
+    userName: `${customer.name} ${customer.surname}`, 
     address: `${customer.address.street}, ${customer.address.city}`,
     productName: product.name,
     productQuantity: productQuant,

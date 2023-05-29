@@ -77,7 +77,6 @@ const inventory = (products) => {
   productWithDiscount = products.map(product => ({ name: product.name, price: product.price, stock: product.stock, newPrice: product.price - (product.discount * product.price) }))
   return productWithDiscount
 }
-
 inventory(products)
 
 const createBill = (userName, productName, productQuant, storeId) => {
